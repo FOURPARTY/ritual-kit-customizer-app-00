@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { Wheat, Droplets, Flame, Apple, Bird, Package2, Package } from 'lucide-react';
 import Header from '@/components/Header';
 import CategoryCard from '@/components/CategoryCard';
@@ -51,7 +52,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   // Load featured products for home
-  useState(() => {
+  useEffect(() => {
     import('../data/products.json').then((data) => {
       // Get first 6 products as featured
       setFeaturedProducts(data.default.slice(0, 6));
