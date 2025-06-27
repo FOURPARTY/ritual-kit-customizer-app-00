@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import KitCard from '@/components/KitCard';
+import BottomNavigation from '@/components/BottomNavigation';
 
 interface Kit {
   id: string;
@@ -16,13 +18,9 @@ interface Kit {
   difficulty: string;
 }
 
-interface KitCatalogProps {
-  onBack: () => void;
-  onKitClick: (kit: Kit) => void;
-}
-
-const KitCatalog = ({ onBack, onKitClick }: KitCatalogProps) => {
+const KitCatalog = () => {
   const [kits, setKits] = useState<Kit[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Load kits from JSON
@@ -31,11 +29,20 @@ const KitCatalog = ({ onBack, onKitClick }: KitCatalogProps) => {
     });
   }, []);
 
+  const handleBack = () => {
+    navigate('/');
+  };
+
+  const handleKitClick = (kit: Kit) => {
+    // For now, just log the kit - can be expanded later
+    console.log('Kit clicked:', kit);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-28">
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center gap-4 mb-8">
-          <Button variant="ghost" onClick={onBack}>
+          <Button variant="ghost" onClick={handleBack}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Voltar
           </Button>
@@ -52,11 +59,12 @@ const KitCatalog = ({ onBack, onKitClick }: KitCatalogProps) => {
             <KitCard
               key={kit.id}
               kit={kit}
-              onClick={onKitClick}
+              onClick={handleKitClick}
             />
           ))}
         </div>
       </div>
+      <BottomNavigation />
     </div>
   );
 };
