@@ -1,1 +1,5 @@
+
 project_id = "eduvdvbpwopnoxleolkb"
+
+[functions.get-products]
+verify_jwt = false

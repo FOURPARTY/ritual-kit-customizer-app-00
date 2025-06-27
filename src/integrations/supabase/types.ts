@@ -9,7 +9,123 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      order_items: {
+        Row: {
+          id: number
+          order_id: number
+          price: number | null
+          product_id: number
+          quantity: number | null
+        }
+        Insert: {
+          id?: number
+          order_id: number
+          price?: number | null
+          product_id: number
+          quantity?: number | null
+        }
+        Update: {
+          id?: number
+          order_id?: number
+          price?: number | null
+          product_id?: number
+          quantity?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_items_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          created_at: string | null
+          id: number
+          status: string | null
+          total_price: number | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: number
+          status?: string | null
+          total_price?: number | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: number
+          status?: string | null
+          total_price?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          category: string | null
+          created_at: string | null
+          description: string | null
+          id: number
+          image_url: string | null
+          name: string
+          price: number | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: number
+          image_url?: string | null
+          name: string
+          price?: number | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: number
+          image_url?: string | null
+          name?: string
+          price?: number | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          baba_iya_name: string | null
+          full_name: string | null
+          id: string
+          ile_axe_name: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          baba_iya_name?: string | null
+          full_name?: string | null
+          id: string
+          ile_axe_name?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          baba_iya_name?: string | null
+          full_name?: string | null
+          id?: string
+          ile_axe_name?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

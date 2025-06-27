@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Wheat, Droplets, Flame, Apple, Bird, Package2, Package } from 'lucide-react';
 import Header from '@/components/Header';
@@ -10,6 +9,7 @@ import KitDetails from './KitDetails';
 import KitCustomizer from './KitCustomizer';
 import ProductCard from '@/components/ProductCard';
 import { useNavigate } from 'react-router-dom';
+import { useProducts } from '@/hooks/useProducts';
 
 interface CartItem {
   id: string;
@@ -48,16 +48,10 @@ const Index = () => {
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
   const navigate = useNavigate();
 
-  // Load featured products for home
-  useEffect(() => {
-    import('../data/products.json').then((data) => {
-      // Get first 6 products as featured
-      setFeaturedProducts(data.default.slice(0, 6));
-    });
-  }, []);
+  // Usar o hook de produtos reais
+  const { products: featuredProducts, loading: productsLoading, error: productsError } = useProducts();
 
   const categories = [
     { id: 1, name: 'Grãos e Farinhas', icon: Wheat, description: 'Ingredientes fundamentais para oferendas e rituais' },
@@ -223,24 +217,42 @@ const Index = () => {
                   Produtos em Destaque
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Comece suas compras com nossos produtos mais populares, selecionados especialmente para você.
+                  Comece suas compras com nossos produtos mais populares, vindos diretamente do nosso banco de dados.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                {featuredProducts.map((product, index) => (
-                  <div
-                    key={product.id}
-                    className="animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <ProductCard
-                      product={product}
-                      onAddToCart={addProductToCart}
-                    />
-                  </div>
-                ))}
-              </div>
+              {productsLoading ? (
+                <div className="text-center py-12">
+                  <div className="text-lg">Carregando axé...</div>
+                </div>
+              ) : productsError ? (
+                <div className="text-center py-12">
+                  <div className="text-red-600">Erro ao carregar produtos: {productsError}</div>
+                  <p className="text-sm text-gray-500 mt-2">Verifique o console para mais detalhes.</p>
+                </div>
+              ) : featuredProducts.length === 0 ? (
+                <div className="text-center py-12">
+                  <div className="text-gray-600">Nenhum produto encontrado no banco de dados.</div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                  {featuredProducts.slice(0, 6).map((product, index) => (
+                    <div
+                      key={product.id}
+                      className="animate-fade-in"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <ProductCard
+                        product={{
+                          ...product,
+                          image: product.image_url || '/placeholder.svg'
+                        }}
+                        onAddToCart={addProductToCart}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Categories Section */}
