@@ -1,5 +1,6 @@
 
 import { X, Minus, Plus, Trash2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -23,6 +24,8 @@ interface CartSidebarProps {
 }
 
 const CartSidebar = ({ isOpen, onClose, items, onUpdateQuantity, onRemoveItem }: CartSidebarProps) => {
+  const navigate = useNavigate();
+  
   const total = items.reduce((sum, item) => {
     const price = parseFloat(item.price.replace('R$ ', '').replace(',', '.'));
     return sum + (price * item.quantity);
@@ -30,6 +33,11 @@ const CartSidebar = ({ isOpen, onClose, items, onUpdateQuantity, onRemoveItem }:
 
   const formatPrice = (value: number) => {
     return `R$ ${value.toFixed(2).replace('.', ',')}`;
+  };
+
+  const handleCheckout = () => {
+    onClose();
+    navigate('/checkout');
   };
 
   if (!isOpen) return null;
@@ -129,8 +137,12 @@ const CartSidebar = ({ isOpen, onClose, items, onUpdateQuantity, onRemoveItem }:
                   <span className="text-primary">{formatPrice(total)}</span>
                 </div>
                 <Separator />
-                <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
-                  Finalizar Compra
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90" 
+                  size="lg"
+                  onClick={handleCheckout}
+                >
+                  Continuar para o Pagamento
                 </Button>
                 <Button variant="outline" className="w-full" onClick={onClose}>
                   Continuar Comprando
