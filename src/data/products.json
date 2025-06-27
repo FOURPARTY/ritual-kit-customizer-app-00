@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": 101,
+    "name": "Farofa de Dendê Premium",
+    "category_id": 1,
+    "price": "R$ 25,90",
+    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    "description": "Farofa especial preparada com dendê puro"
+  },
+  {
+    "id": 102,
+    "name": "Farinha de Mandioca Sagrada", 
+    "category_id": 1,
+    "price": "R$ 18,50",
+    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    "description": "Farinha de mandioca para rituais tradicionais"
+  },
+  {
+    "id": 105,
+    "name": "Mel de Abelhas Silvestres",
+    "category_id": 1,
+    "price": "R$ 32,00",
+    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    "description": "Mel puro coletado de abelhas silvestres"
+  },
+  {
+    "id": 201,
+    "name": "Vela Vermelha Grande",
+    "category_id": 2,
+    "price": "R$ 12,90",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
+    "description": "Vela vermelha de 7 dias para Exu"
+  },
+  {
+    "id": 202,
+    "name": "Incenso de Arruda",
+    "category_id": 2,
+    "price": "R$ 8,90",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400", 
+    "description": "Incenso natural de arruda para limpeza"
+  },
+  {
+    "id": 203,
+    "name": "Velas Coloridas Kit 7 Cores",
+    "category_id": 2,
+    "price": "R$ 29,90",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
+    "description": "Kit com 7 velas nas cores dos orixás"
+  },
+  {
+    "id": 301,
+    "name": "Cachaça Artesanal",
+    "category_id": 1,
+    "price": "R$ 35,00",
+    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    "description": "Cachaça pura para oferendas"
+  },
+  {
+    "id": 401,
+    "name": "Charuto Premium",
+    "category_id": 2,
+    "price": "R$ 15,50",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
+    "description": "Charuto especial para rituais"
+  },
+  {
+    "id": 405,
+    "name": "Óleo de Dendê Puro",
+    "category_id": 1,
+    "price": "R$ 22,90",
+    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    "description": "Óleo de dendê puro para oferendas"
+  }
+]

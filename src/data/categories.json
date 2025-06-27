@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": 1,
+    "name": "Grãos e Farinhas",
+    "icon": "Wheat",
+    "description": "Ingredientes fundamentais para oferendas e rituais"
+  },
+  {
+    "id": 2,
+    "name": "Velas e Incensos",
+    "icon": "Flame",
+    "description": "Elementos de luz e aroma para suas práticas"
+  },
+  {
+    "id": 3,
+    "name": "Kits Prontos", 
+    "icon": "Package",
+    "description": "Conjuntos completos para rituais específicos"
+  }
+]

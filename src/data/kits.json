@@ -1,0 +1,36 @@
+
+[
+  {
+    "id": "kit-ebo-exu-01",
+    "name": "Kit Básico para Ebó de Exu",
+    "description": "Contém os itens essenciais para uma oferenda simples para Exu. Perfeito para iniciantes.",
+    "price": "R$ 89,90",
+    "original_price": "R$ 104,30",
+    "product_ids": [101, 105, 203, 301],
+    "image": "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600",
+    "ritual_type": "Ebó",
+    "difficulty": "Iniciante"
+  },
+  {
+    "id": "kit-bori-01",
+    "name": "Kit Completo para Bori",
+    "description": "Tudo que você precisa para a cerimônia de Bori. Conjunto tradicional e completo.",
+    "price": "R$ 159,90",
+    "original_price": "R$ 186,20",
+    "product_ids": [102, 201, 202, 401, 405],
+    "image": "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600",
+    "ritual_type": "Bori",
+    "difficulty": "Avançado"
+  },
+  {
+    "id": "kit-limpeza-01",
+    "name": "Kit Limpeza Espiritual",
+    "description": "Para limpeza e proteção do ambiente. Ideal para uso semanal.",
+    "price": "R$ 65,90",
+    "original_price": "R$ 73,80",
+    "product_ids": [202, 203, 102],
+    "image": "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600",
+    "ritual_type": "Limpeza",
+    "difficulty": "Iniciante"
+  }
+]
