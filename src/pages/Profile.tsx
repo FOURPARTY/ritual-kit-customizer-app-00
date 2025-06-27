@@ -2,10 +2,12 @@
 import { useState } from 'react';
 import { User, Settings, MapPin, Phone, Mail, Edit3, LogOut, Heart, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import BottomNavigation from '@/components/BottomNavigation';
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [user] = useState({
     name: 'Maria Santos',
     email: 'maria.santos@email.com',
@@ -13,6 +15,17 @@ const Profile = () => {
     casa_axe: 'Casa de Oxalá',
     cidade: 'São Paulo, SP'
   });
+
+  const handleLogout = () => {
+    // Clear authentication data
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('loginMethod');
+    
+    // Redirect to welcome page
+    navigate('/', { replace: true });
+  };
 
   const profileOptions = [
     { icon: Edit3, label: 'Editar Perfil', description: 'Alterar dados pessoais' },
@@ -82,6 +95,7 @@ const Profile = () => {
         {/* Logout Button */}
         <div className="mt-8">
           <Button 
+            onClick={handleLogout}
             variant="outline" 
             className="w-full h-12 text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300"
           >
