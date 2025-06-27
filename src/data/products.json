@@ -2,74 +2,335 @@
 [
   {
     "id": 101,
-    "name": "Farofa de Dendê Premium",
+    "name": "Feijão Fradinho",
     "category_id": 1,
-    "price": "R$ 25,90",
-    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    "description": "Farofa especial preparada com dendê puro"
+    "price": "R$ 3,50",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+    "description": "Essencial para oferendas e pratos rituais, ligado à prosperidade.",
+    "unit": "Kg"
   },
   {
     "id": 102,
-    "name": "Farinha de Mandioca Sagrada", 
+    "name": "Feijão Preto",
     "category_id": 1,
-    "price": "R$ 18,50",
-    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    "description": "Farinha de mandioca para rituais tradicionais"
+    "price": "R$ 2,90",
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+    "description": "Grão de força, fundamental em rituais para Orixás como Ogum e Exu.",
+    "unit": "Kg"
+  },
+  {
+    "id": 103,
+    "name": "Milho Branco (Canjica)",
+    "category_id": 1,
+    "price": "R$ 8,00",
+    "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400",
+    "description": "Utilizado para comidas de Oxalá e outros Orixás Funfun. Simboliza a paz.",
+    "unit": "Kg"
+  },
+  {
+    "id": 104,
+    "name": "Milho para Pipoca (Deburu)",
+    "category_id": 1,
+    "price": "R$ 2,20",
+    "image": "https://images.unsplash.com/photo-1585735557513-7c0d50e4b6b6?w=400",
+    "description": "A pipoca sagrada de Obaluaê/Omolu, usada para limpeza e cura.",
+    "unit": "500g"
   },
   {
     "id": 105,
-    "name": "Mel de Abelhas Silvestres",
+    "name": "Canjica Branca",
     "category_id": 1,
-    "price": "R$ 32,00",
-    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    "description": "Mel puro coletado de abelhas silvestres"
+    "price": "R$ 1,90",
+    "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400",
+    "description": "Milho branco degerminado para o preparo de comidas sagradas.",
+    "unit": "500g"
+  },
+  {
+    "id": 106,
+    "name": "Canjica Amarela",
+    "category_id": 1,
+    "price": "R$ 1,90",
+    "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400",
+    "description": "Associada a Orixás como Oxum e Iansã, usada em diversas oferendas.",
+    "unit": "500g"
   },
   {
     "id": 201,
-    "name": "Vela Vermelha Grande",
+    "name": "Azeite de Dendê",
     "category_id": 2,
-    "price": "R$ 12,90",
-    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
-    "description": "Vela vermelha de 7 dias para Exu"
+    "price": "R$ 6,00",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400",
+    "description": "O azeite sagrado, indispensável na culinária para a maioria dos Orixás.",
+    "unit": "500ml"
   },
   {
     "id": 202,
-    "name": "Incenso de Arruda",
+    "name": "Mel",
     "category_id": 2,
-    "price": "R$ 8,90",
-    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400", 
-    "description": "Incenso natural de arruda para limpeza"
+    "price": "R$ 5,00",
+    "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400",
+    "description": "Utilizado para adoçar, acalmar e em rituais para Orixás como Oxum.",
+    "unit": "250ml"
   },
   {
     "id": 203,
-    "name": "Velas Coloridas Kit 7 Cores",
+    "name": "Cachaça (Pinga)",
     "category_id": 2,
-    "price": "R$ 29,90",
-    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
-    "description": "Kit com 7 velas nas cores dos orixás"
+    "price": "R$ 9,80",
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400",
+    "description": "Bebida oferecida a Exu e outros Orixás, presente em diversos rituais.",
+    "unit": "Litro"
   },
   {
     "id": 301,
-    "name": "Cachaça Artesanal",
-    "category_id": 1,
-    "price": "R$ 35,00",
-    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    "description": "Cachaça pura para oferendas"
+    "name": "Vela Comum Branca (Nº 3)",
+    "category_id": 3,
+    "price": "R$ 7,00",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
+    "description": "Velas de uso diário para firmeza, orações e iluminação.",
+    "unit": "Maço"
+  },
+  {
+    "id": 302,
+    "name": "Vela de 7 Dias Sortida",
+    "category_id": 3,
+    "price": "R$ 13,50",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
+    "description": "Para firmezas de longa duração. Cores sortidas para diferentes Orixás.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 303,
+    "name": "Pano Preto",
+    "category_id": 3,
+    "price": "R$ 2,50",
+    "image": "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=400",
+    "description": "Tecido utilizado para forrar assentamentos, em rituais específicos.",
+    "unit": "Metro"
+  },
+  {
+    "id": 304,
+    "name": "Pano Branco (Alá)",
+    "category_id": 3,
+    "price": "R$ 5,00",
+    "image": "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=400",
+    "description": "O Alá, tecido sagrado de Oxalá, simboliza a paz e a pureza.",
+    "unit": "Metro"
+  },
+  {
+    "id": 305,
+    "name": "Pano Verde",
+    "category_id": 3,
+    "price": "R$ 5,00",
+    "image": "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=400",
+    "description": "Tecido ligado aos Orixás das matas, como Oxóssi.",
+    "unit": "Metro"
+  },
+  {
+    "id": 306,
+    "name": "Punhal Pequeno",
+    "category_id": 3,
+    "price": "R$ 1,50",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+    "description": "Ferramenta simbólica ligada a Ogum e outros Orixás guerreiros.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 307,
+    "name": "Charuto",
+    "category_id": 3,
+    "price": "R$ 10,50",
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+    "description": "Utilizado em defumações e como oferenda para diversas entidades.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 308,
+    "name": "Azougue (Mercúrio)",
+    "category_id": 3,
+    "price": "R$ 14,00",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+    "description": "Elemento de grande poder mágico, usado com sabedoria em rituais específicos.",
+    "unit": "Frasco"
+  },
+  {
+    "id": 309,
+    "name": "Pimenta da Costa (Ataré)",
+    "category_id": 3,
+    "price": "R$ 14,00",
+    "image": "https://images.unsplash.com/photo-1583554498946-6e09ac73afc8?w=400",
+    "description": "Semente sagrada de grande poder, usada para dar força à palavra (Asé).",
+    "unit": "Saquinho"
+  },
+  {
+    "id": 310,
+    "name": "Sabão da Costa",
+    "category_id": 3,
+    "price": "R$ 3,00",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400",
+    "description": "Sabão de origem africana para banhos de purificação e limpeza espiritual.",
+    "unit": "Unidade"
   },
   {
     "id": 401,
-    "name": "Charuto Premium",
-    "category_id": 2,
-    "price": "R$ 15,50",
-    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
-    "description": "Charuto especial para rituais"
+    "name": "Batata-Doce",
+    "category_id": 4,
+    "price": "R$ 2,00",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+    "description": "Oferenda apreciada por Oxumaré e outros Orixás.",
+    "unit": "Kg"
+  },
+  {
+    "id": 402,
+    "name": "Cebola",
+    "category_id": 4,
+    "price": "R$ 1,20",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+    "description": "Tempero e componente essencial na culinária dos Orixás.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 403,
+    "name": "Quiabo",
+    "category_id": 4,
+    "price": "R$ 4,50",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+    "description": "Alimento de Xangô, usado no preparo do Amalá.",
+    "unit": "Dúzia"
+  },
+  {
+    "id": 404,
+    "name": "Chuchu",
+    "category_id": 4,
+    "price": "R$ 1,80",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+    "description": "Ingrediente para compor oferendas e comidas dos Orixás.",
+    "unit": "Unidade"
   },
   {
     "id": 405,
-    "name": "Óleo de Dendê Puro",
-    "category_id": 1,
-    "price": "R$ 22,90",
-    "image": "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
-    "description": "Óleo de dendê puro para oferendas"
+    "name": "Berinjela",
+    "category_id": 4,
+    "price": "R$ 2,30",
+    "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+    "description": "Usada em oferendas para Orixás como Iansã e Nanã.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 406,
+    "name": "Maçã",
+    "category_id": 4,
+    "price": "R$ 1,50",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400",
+    "description": "Fruta comumente usada para adoçar e agradar Orixás.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 407,
+    "name": "Pera",
+    "category_id": 4,
+    "price": "R$ 3,00",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400",
+    "description": "Fruta doce usada em oferendas e rituais.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 408,
+    "name": "Goiaba",
+    "category_id": 4,
+    "price": "R$ 1,00",
+    "image": "https://images.unsplash.com/photo-1584841479036-2e6c0c45b1c7?w=400",
+    "description": "Fruta tropical apreciada pelos Orixás.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 409,
+    "name": "Mamão",
+    "category_id": 4,
+    "price": "R$ 3,00",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400",
+    "description": "Fruta doce e nutritiva para oferendas.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 410,
+    "name": "Uva",
+    "category_id": 4,
+    "price": "R$ 6,00",
+    "image": "https://images.unsplash.com/photo-1599819177626-efa8c8982e95?w=400",
+    "description": "Fruta nobre usada em rituais especiais.",
+    "unit": "Cacho"
+  },
+  {
+    "id": 411,
+    "name": "Morango",
+    "category_id": 4,
+    "price": "R$ 3,00",
+    "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=400",
+    "description": "Fruta delicada para oferendas especiais.",
+    "unit": "Caixa"
+  },
+  {
+    "id": 412,
+    "name": "Banana D'ouro",
+    "category_id": 4,
+    "price": "R$ 1,50",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400",
+    "description": "Banana especial para oferendas e rituais.",
+    "unit": "Dúzia"
+  },
+  {
+    "id": 501,
+    "name": "Frango",
+    "category_id": 5,
+    "price": "R$ 7,67",
+    "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400",
+    "description": "Utilizado em diversos rituais e oferendas sagradas.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 502,
+    "name": "Peito de Frango",
+    "category_id": 5,
+    "price": "R$ 13,96",
+    "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400",
+    "description": "Para o preparo de comidas de santo que não exigem o animal inteiro.",
+    "unit": "Kg"
+  },
+  {
+    "id": 601,
+    "name": "Esteira de Palha",
+    "category_id": 6,
+    "price": "R$ 15,00",
+    "image": "https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?w=400",
+    "description": "Usada para forrar o chão, como assento e em diversos rituais. Respeito.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 602,
+    "name": "Bacia de Ágata",
+    "category_id": 6,
+    "price": "R$ 28,00",
+    "image": "https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?w=400",
+    "description": "Recipiente tradicional e resistente para banhos, assentamentos e oferendas.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 603,
+    "name": "Terrina Média com Tampa",
+    "category_id": 6,
+    "price": "R$ 6,50",
+    "image": "https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?w=400",
+    "description": "Recipiente de barro ou louça para guardar e oferecer comidas sagradas.",
+    "unit": "Unidade"
+  },
+  {
+    "id": 604,
+    "name": "Gamela de Madeira",
+    "category_id": 6,
+    "price": "R$ 11,00",
+    "image": "https://images.unsplash.com/photo-1586034679970-cb7b5fc4928a?w=400",
+    "description": "Recipiente tradicional para o Amalá de Xangô e outras oferendas.",
+    "unit": "Unidade"
   }
 ]

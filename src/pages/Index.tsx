@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Wheat, Flame, Package } from 'lucide-react';
+import { Wheat, Droplets, Flame, Apple, Bird, Package2, Package } from 'lucide-react';
 import Header from '@/components/Header';
 import CategoryCard from '@/components/CategoryCard';
 import CartSidebar from '@/components/CartSidebar';
@@ -48,13 +47,17 @@ const Index = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const categories = [
-    { id: 1, name: 'Grãος e Farinhas', icon: Wheat, description: 'Ingredientes fundamentais para oferendas e rituais' },
-    { id: 2, name: 'Velas e Incensos', icon: Flame, description: 'Elementos de luz e aroma para suas práticas' },
-    { id: 3, name: 'Kits Prontos', icon: Package, description: 'Conjuntos completos para rituais específicos' }
+    { id: 1, name: 'Grãos e Farinhas', icon: Wheat, description: 'Ingredientes fundamentais para oferendas e rituais' },
+    { id: 2, name: 'Líquidos e Azeites', icon: Droplets, description: 'Azeites sagrados, mel e bebidas rituais' },
+    { id: 3, name: 'Velas e Itens Rituais', icon: Flame, description: 'Velas, tecidos e ferramentas para seus rituais' },
+    { id: 4, name: 'Frutas e Verduras', icon: Apple, description: 'Frutas, legumes e verduras para oferendas' },
+    { id: 5, name: 'Animais Sagrados', icon: Bird, description: 'Animais para rituais e oferendas sagradas' },
+    { id: 6, name: 'Utensílios Rituais', icon: Package2, description: 'Bacias, terrinas e utensílios tradicionais' },
+    { id: 7, name: 'Kits Prontos', icon: Package, description: 'Conjuntos completos para rituais específicos' }
   ];
 
   const handleCategoryClick = (category: any) => {
-    if (category.id === 3) {
+    if (category.id === 7) {
       setCurrentView('kits');
     } else {
       setSelectedCategory(category);
