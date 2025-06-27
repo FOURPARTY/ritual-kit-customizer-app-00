@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -36,7 +35,7 @@ const Login = () => {
     localStorage.setItem('isAuthenticated', 'true');
     localStorage.setItem('userEmail', email);
     localStorage.setItem('loginMethod', 'email');
-    navigate('/', { replace: true });
+    navigate('/home', { replace: true });
   };
 
   const handleBack = () => {

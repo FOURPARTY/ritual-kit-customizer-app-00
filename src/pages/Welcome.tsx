@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -26,7 +25,7 @@ const Welcome = () => {
     // Simulate immediate social login success
     localStorage.setItem('isAuthenticated', 'true');
     localStorage.setItem('loginMethod', provider);
-    navigate('/', { replace: true });
+    navigate('/home', { replace: true });
   };
 
   const handleEmailFlow = () => {

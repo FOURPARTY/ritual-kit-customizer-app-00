@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Wheat, Droplets, Flame, Apple, Bird, Package2, Package } from 'lucide-react';
 import Header from '@/components/Header';
@@ -6,9 +5,10 @@ import CategoryCard from '@/components/CategoryCard';
 import CartSidebar from '@/components/CartSidebar';
 import BottomNavigation from '@/components/BottomNavigation';
 import ProductCatalog from './ProductCatalog';
-import KitCatalog from './KitCatalog';
 import KitDetails from './KitDetails';
 import KitCustomizer from './KitCustomizer';
+import ProductCard from '@/components/ProductCard';
+import { useNavigate } from 'react-router-dom';
 
 interface CartItem {
   id: string;
@@ -42,11 +42,21 @@ interface Product {
 }
 
 const Index = () => {
-  const [currentView, setCurrentView] = useState<'home' | 'products' | 'kits' | 'kit-details' | 'kit-customizer'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'products' | 'kit-details' | 'kit-customizer'>('home');
   const [selectedCategory, setSelectedCategory] = useState<{ id: number; name: string }>({ id: 1, name: '' });
   const [selectedKit, setSelectedKit] = useState<Kit | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
+  const navigate = useNavigate();
+
+  // Load featured products for home
+  useState(() => {
+    import('../data/products.json').then((data) => {
+      // Get first 6 products as featured
+      setFeaturedProducts(data.default.slice(0, 6));
+    });
+  }, []);
 
   const categories = [
     { id: 1, name: 'Grãos e Farinhas', icon: Wheat, description: 'Ingredientes fundamentais para oferendas e rituais' },
@@ -60,7 +70,7 @@ const Index = () => {
 
   const handleCategoryClick = (category: any) => {
     if (category.id === 7) {
-      setCurrentView('kits');
+      navigate('/kits');
     } else {
       setSelectedCategory(category);
       setCurrentView('products');
@@ -156,18 +166,11 @@ const Index = () => {
             onAddToCart={addProductToCart}
           />
         );
-      case 'kits':
-        return (
-          <KitCatalog
-            onBack={() => setCurrentView('home')}
-            onKitClick={handleKitClick}
-          />
-        );
       case 'kit-details':
         return selectedKit ? (
           <KitDetails
             kit={selectedKit}
-            onBack={() => setCurrentView('kits')}
+            onBack={() => setCurrentView('home')}
             onCustomize={handleCustomizeKit}
             onAddToCart={addKitToCart}
           />
@@ -209,6 +212,33 @@ const Index = () => {
                     <span>Entrega Rápida</span>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Featured Products Section */}
+            <div className="container mx-auto px-4 py-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Produtos em Destaque
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Comece suas compras com nossos produtos mais populares, selecionados especialmente para você.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                {featuredProducts.map((product, index) => (
+                  <div
+                    key={product.id}
+                    className="animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <ProductCard
+                      product={product}
+                      onAddToCart={addProductToCart}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
