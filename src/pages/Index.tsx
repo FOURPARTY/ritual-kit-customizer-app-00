@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Wheat, Droplets, Flame, Apple, Bird, Package2, Package } from 'lucide-react';
 import Header from '@/components/Header';
 import CategoryCard from '@/components/CategoryCard';
 import CartSidebar from '@/components/CartSidebar';
+import BottomNavigation from '@/components/BottomNavigation';
 import ProductCatalog from './ProductCatalog';
 import KitCatalog from './KitCatalog';
 import KitDetails from './KitDetails';
@@ -180,7 +182,7 @@ const Index = () => {
         ) : null;
       default:
         return (
-          <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50">
+          <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 pb-28">
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
               <div className="container mx-auto px-4 text-center">
@@ -303,6 +305,9 @@ const Index = () => {
         onUpdateQuantity={updateCartQuantity}
         onRemoveItem={removeCartItem}
       />
+
+      {/* Mostrar menu apenas na home */}
+      {currentView === 'home' && <BottomNavigation />}
     </div>
   );
 };
