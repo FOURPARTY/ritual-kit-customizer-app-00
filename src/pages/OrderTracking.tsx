@@ -57,7 +57,13 @@ const OrderTracking = () => {
   };
 
   const handleRateOrder = () => {
-    toast.success('Obrigado pela avaliação!');
+    // Mostrar toast de agradecimento
+    toast.success('Obrigado pelo seu feedback! Axé!');
+    
+    // Aguardar 1.5 segundos e redirecionar para home
+    setTimeout(() => {
+      navigate('/', { replace: true });
+    }, 1500);
   };
 
   return (
@@ -132,7 +138,7 @@ const OrderTracking = () => {
 
             {/* Delivery info (shows when delivered) */}
             {showDeliveryInfo && (
-              <Card className="border-green-200 bg-green-50">
+              <Card className="border-green-200 bg-green-50 animate-fade-in">
                 <CardHeader>
                   <CardTitle className="text-green-800">Pedido Entregue!</CardTitle>
                 </CardHeader>
@@ -148,7 +154,7 @@ const OrderTracking = () => {
                   </div>
                   
                   <Button 
-                    className="w-full"
+                    className="w-full transition-all duration-200 hover:shadow-lg active:scale-[0.98]"
                     onClick={handleRateOrder}
                   >
                     <Star className="h-4 w-4 mr-2" />
