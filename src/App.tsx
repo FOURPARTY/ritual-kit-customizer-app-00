@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Checkout from "./pages/Checkout";
 import OrderTracking from "./pages/OrderTracking";
+import Welcome from "./pages/Welcome";
+import EmailAuth from "./pages/EmailAuth";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +25,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/pedidos/:orderId" element={<OrderTracking />} />
+          <Route path="/auth/welcome" element={<Welcome />} />
+          <Route path="/auth/email" element={<EmailAuth />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/signup" element={<Signup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
